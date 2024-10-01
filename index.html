@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Resultados</title>
+    <link rel="stylesheet" href="styles.css"> 
+    
+</head>
+<body>
+      <header>
+        <img src='./LogoClinica.png' alt="LogoClinica" class='imgClinica'/>
+        <h1>Clínica Central del Quíndio</h1>
+      </header>
+
+
+      <div class='sub'>
+        <h2>Tablero de Pacientes</h2>
+      </div>
+
+
+      <div class='containerFilter'>
+        <h3>Filtrar por pabellon: </h3>
+        <div>
+          <select name="Pabellon" id="Pabellon">
+            <option value="">TODOS LOS PABELLONES</option>
+            <option value="URGENCIAS">URGENCIAS</option>
+            <option value="UCIN ADULTOS">UCIN ADULTOS</option>
+            <option value="OBSERVACION ADULTOS">OBSERVACION ADULTOS</option>
+            <option value="CIRUGIA HOSPITALARIA">CIRUGIA HOSPITALARIA</option>
+            <option value="HOSPITALIZACION 3 PISO">HOSPITALIZACION 3 PISO</option>
+            <option value="HOSPITALIZACION 4 PISO">HOSPITALIZACION 4 PISO</option>
+            <option value="HOSPITALIZACION 5 PISO">HOSPITALIZACION 5 PISO</option>
+            <option value="HOSPITALIZACION 6 PISO">HOSPITALIZACION 6 PISO</option>
+            <option value="EXPANSIÓN URGENCIAS">EXPANSIÓN URGENCIAS</option>
+          </select>
+        </div>
+
+        <h3>Filtrar por servicio: </h3>
+        <div>
+          <select name="Servicio" id="Servicio" >
+            <option value="">TODOS LOS SERVICIOS</option>
+            <option value="IMAGENES DIAGNOSTICAS">IMAGENES DIAGNOSTICAS</option>
+            <option value="LABORATORIOS">LABORATORIOS</option>
+          </select>
+        </div>
+        
+      </div>
+
+      <div class="containerBar">
+        <h3>Filtrar por búsqueda: </h3>
+        <div>
+          <input
+            class='search'
+            type="text"
+            placeholder='Buscar paciente'
+            id="searchInput"
+          />
+        </div>
+      </div>
+      <div class='containerTable'>
+
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Cama</th>
+                    <th>Ingreso</th>
+                    <th>Tipo Documento</th>
+                    <th>Documento</th>
+                    <th>Folio</th>
+                    <th>Paciente</th>
+                    <th>Origen Atención</th>
+                    <th>CUPS</th>
+                    <th>Nombre Procedimiento</th>
+                    <th>Cantidad</th>
+                    <th>Fecha Orden</th>
+                    <th id='obs'>Observaciones</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <footer>
+      <img src='./LogoClinica.png' alt="LogoClinica" />
+      <div id='copy'>
+          <p>Copyright 2024 &copy; Todos los derechos reservados. Desarrollado por <span>Santiago Castaño</span></p>
+      </div>
+  </footer>
+    <script src="app.js"></script>
+      
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+</html>
